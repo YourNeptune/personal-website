@@ -38,6 +38,7 @@
     position: absolute;
     top: 30%;
     left: 25%;
+    text-align: initial;
   }
   .Home__name {
     font-size: 4.5rem;

@@ -7,7 +7,7 @@
   display: grid;
   place-items: center;
 
-  &__text{
+  &__text {
     width: 100%;
     text-align: center;
   }
@@ -29,6 +29,7 @@
       position: absolute;
       top: 30%;
       left: 25%;
+      text-align: initial;
     }
 
     &__name {
