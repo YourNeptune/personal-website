@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     const typed = new Typed(typeTarget.current, {
-      strings: [ `A Front-End Developer`, `UI/UX Designer`, `Programmer`],
+      strings: [`A Front-End Developer`, `UI/UX Designer`, `Programmer`],
       startDelay: 500,
       typeSpeed: 40,
       backSpeed: 20,
@@ -19,15 +19,15 @@ const Home = () => {
     };
   }, []);
   return (
-    <Container className="Home">
+    <div className="Home mycontainer">
       <div className="Home__text">
         <h2>I' am</h2>
         <h1 className="Home__name">
           Lixuan <br /> Luo
         </h1>
-        <span className='Home__typed' ref={typeTarget} />
+        <span className="Home__typed" ref={typeTarget} />
       </div>
-    </Container>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import me from "../img/me.png";
 
 const AboutMe = () => {
   return (
-    <Container className="AboutMe container">
+    <div className="AboutMe mycontainer">
       <section className="flex flex-center AboutMe__content">
         <img src={me} alt="me" />
         <h1 className="AboutMe__title">Hi, I'm Lixuan Luo</h1>
@@ -20,7 +20,7 @@ const AboutMe = () => {
           right company.
         </p>
       </section>
-    </Container>
+    </div>
   );
 };
 

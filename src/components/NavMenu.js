@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
 import { BiMenu, BiX } from "react-icons/bi";
 import { Link } from "react-scroll";
 
@@ -15,17 +14,17 @@ const NavMenu = ({ scroll }) => {
           className={`NavMenu__menu flex ${scroll && "NavMenu--scroll"}`}
           onClick={handleShow}
         >
-          <BiMenu />
+          <BiMenu className="clickable"/>
         </div>
       )}
 
       {show && (
-        <div className={`content ${show && `showContent`}`}>
+        <div className={`content ${scroll && "NavMenu--scroll"}`}>
           <div
             className="NavMenu__menu NavMenu__menu--close"
             onClick={handleClose}
           >
-            <BiX />
+            <BiX className="clickable"/>
           </div>
           <div className="blur-effect"></div>
           <div className="NavMenu__links ">

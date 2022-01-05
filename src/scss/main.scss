@@ -19,8 +19,8 @@ a {
 }
 
 /* ===== Reuseable CSS Classes ===== */
-.container {
-  min-height: 100vh;
+.mycontainer {
+  height: 100vh;
   padding: $pl-2-5;
 }
 
@@ -46,4 +46,8 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.clickable{
+  cursor: pointer;
 }
