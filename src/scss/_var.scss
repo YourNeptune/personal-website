@@ -1,6 +1,10 @@
 /* ===== Color ===== */
 $dark-theme-text:#fff;
 $light-theme-text:#000;
+$first-color:rgb(247, 150, 91);
+$second-color:#ffc288;
+$text-color: hsl(355, 4%, 35%);
+$text-color-light: hsl(355, 4%, 55%);
 
 /* ===== Font and typography ===== */
 /*.5rem = 8px | 1rem = 16px ...*/
@@ -15,7 +19,8 @@ $small-font-size: 0.813rem;
 $smaller-font-size: 0.75rem;
 
 /* ===== Height ===== */
-$nav-height:4rem;
+$nav-height: 4rem;
+$image-height: 10rem;
 
 /* ===== Font Weight ===== */
 $font-xLight:200;

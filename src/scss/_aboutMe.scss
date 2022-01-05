@@ -1,0 +1,12 @@
+.AboutMe {
+  img {
+    height: $image-height;
+    margin-bottom: $mb-1-5;
+  }
+
+  &__content {
+    flex-direction: column;
+    font-size: $h2-font-size;
+    color: $first-color;
+  }
+}

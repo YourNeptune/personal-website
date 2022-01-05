@@ -4,6 +4,8 @@
 @import "./home";
 @import "./navMenu";
 @import "./navbar";
+@import "./aboutMe";
+
 /* ===== Base ===== */
 * {
   margin: 0;
@@ -19,6 +21,7 @@ a {
 /* ===== Reuseable CSS Classes ===== */
 .container {
   min-height: 100vh;
+  padding: $pl-2-5;
 }
 
 .center {
