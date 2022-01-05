@@ -6,7 +6,15 @@
 
   &__content {
     flex-direction: column;
-    font-size: $h2-font-size;
+  }
+
+  &__title {
+    margin-bottom: $mb-1-5;
     color: $first-color;
+    font-size: $h1-font-size;
+  }
+
+  &__description {
+      color:$text-color;
   }
 }

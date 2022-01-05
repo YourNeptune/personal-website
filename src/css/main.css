@@ -181,8 +181,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 1.25rem;
+}
+
+.AboutMe__title {
+  margin-bottom: 1.5rem;
   color: #f7965b;
+  font-size: 1.5rem;
+}
+
+.AboutMe__description {
+  color: #5d5656;
 }
 
 /* ===== Base ===== */
