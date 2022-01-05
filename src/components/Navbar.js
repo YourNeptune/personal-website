@@ -62,9 +62,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      <>
-        <NavMenu />
-      </>
+      <div className="NavMenu navbar showMenu">
+        <NavMenu scroll={scroll}/>
+      </div>
     </div>
   );
 };

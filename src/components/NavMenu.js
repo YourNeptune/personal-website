@@ -3,15 +3,18 @@ import { Container } from "react-bootstrap";
 import { BiMenu, BiX } from "react-icons/bi";
 import { Link } from "react-scroll";
 
-const NavMenu = () => {
+const NavMenu = ({ scroll }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className="NavMenu navbar showMenu">
+    <>
       {!show && (
-        <div className="NavMenu__menu" onClick={handleShow}>
+        <div
+          className={`NavMenu__menu flex ${scroll && "NavMenu--scroll"}`}
+          onClick={handleShow}
+        >
           <BiMenu />
         </div>
       )}
@@ -63,7 +66,7 @@ const NavMenu = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
