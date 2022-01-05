@@ -6,12 +6,16 @@ $light-theme-text:#000;
 /*.5rem = 8px | 1rem = 16px ...*/
 $body-font: 'Noto Sans', sans-serif;
 $biggest-font-size: 4.5rem;
+$large-font-size:3.5rem;
 $h1-font-size: 1.5rem;
 $h2-font-size: 1.25rem;
 $h3-font-size: 1rem;
 $normal-font-size: 0.938rem;
 $small-font-size: 0.813rem;
 $smaller-font-size: 0.75rem;
+
+/* ===== Height ===== */
+$nav-height:4rem;
 
 /* ===== Font Weight ===== */
 $font-xLight:200;
@@ -36,3 +40,7 @@ $mb-1: 1rem;
 $mb-1-5: 1.5rem;
 $mb-2: 2rem;
 $mb-2-5: 2.5rem;
+
+/* ===== Z Index ===== */
+$z-tooltip: 10;
+$z-fixed: 100;

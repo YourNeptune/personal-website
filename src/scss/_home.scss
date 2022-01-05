@@ -4,20 +4,35 @@
       center;
   background-size: cover;
   color: $dark-theme-text;
+  display: grid;
+  place-items: center;
 
-  &__text {
-    position: absolute;
-    top: 30%;
-    left: 25%;
+  &__text{
+    width: 100%;
+    text-align: center;
   }
 
   &__name {
-    font-size: $biggest-font-size;
+    font-size: $large-font-size;
     margin-bottom: $mb-0-5;
   }
 
   &__typed {
     font-family: "Indie Flower", cursive;
     font-size: $h2-font-size;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .Home {
+    &__text {
+      position: absolute;
+      top: 30%;
+      left: 25%;
+    }
+
+    &__name {
+      font-size: $biggest-font-size;
+    }
   }
 }
