@@ -1,6 +1,6 @@
 import React from "react";
 import me from "../img/me.png";
-import { BsGithub, BsEnvelope, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsEnvelopeFill, BsLinkedin } from "react-icons/bs";
 
 const AboutMe = () => {
   return (
@@ -26,7 +26,7 @@ const AboutMe = () => {
         </p>
         <section className="AboutMe__contactInfo flex">
           <div className="AboutMe__link">
-            <BsEnvelope />
+            <BsEnvelopeFill />
           </div>
           <div className="AboutMe__link">
             <BsGithub />
