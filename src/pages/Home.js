@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Container } from "react-bootstrap";
 import Typed from "typed.js";
 
 const Home = () => {

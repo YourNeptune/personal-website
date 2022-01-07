@@ -6,15 +6,29 @@
 
   &__content {
     flex-direction: column;
+    margin-bottom: $mb-1-5;
   }
 
   &__title {
     margin-bottom: $mb-1-5;
-    color: $first-color;
+    color: $second-color;
     font-size: $h1-font-size;
   }
 
   &__description {
       color:$text-color;
+  }
+
+  &__link{
+      margin-right: $mb-2-5;
+      font-size: $h1-font-size;
+      color:$first-color;
+      cursor: pointer;
+      transition: 0.4s;
+  }
+
+  &__link:hover{
+    color:$third-color;
+    transform: scale(1.2);
   }
 }

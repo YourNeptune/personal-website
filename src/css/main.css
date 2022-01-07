@@ -130,12 +130,12 @@
 }
 
 .Navbar a {
-  margin-left: 1.5rem;
+  margin-left: 2.5rem;
   font-weight: 700;
 }
 
 .Navbar .active {
-  color: #ffc288 !important;
+  color: #bf764c;
 }
 
 .Navbar--home {
@@ -176,16 +176,32 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 1.5rem;
 }
 
 .AboutMe__title {
   margin-bottom: 1.5rem;
-  color: #f7965b;
+  color: #bf764c;
   font-size: 1.5rem;
 }
 
 .AboutMe__description {
   color: #5d5656;
+}
+
+.AboutMe__link {
+  margin-right: 2.5rem;
+  font-size: 1.5rem;
+  color: #ad704f;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.AboutMe__link:hover {
+  color: #db9a68;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 /* ===== Base ===== */
@@ -205,7 +221,7 @@ a {
 /* ===== Reuseable CSS Classes ===== */
 .mycontainer {
   height: 100vh;
-  padding: 2.5rem;
+  padding: 3rem;
 }
 
 .center {

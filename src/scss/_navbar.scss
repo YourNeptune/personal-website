@@ -16,12 +16,12 @@
   }
 
   a {
-    margin-left: $mb-1-5;
+    margin-left: $mb-2-5;
     font-weight: $font-bold;
   }
 
   .active {
-    color: #ffc288 !important;
+    color: $second-color ;
   }
 
   &--home {
