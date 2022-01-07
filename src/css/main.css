@@ -19,7 +19,6 @@
 }
 
 .Home__text {
-  width: 100%;
   text-align: center;
 }
 
@@ -166,12 +165,10 @@
   }
 }
 
-.AboutMe img {
-  height: 10rem;
-  margin-bottom: 1.5rem;
-}
-
-.AboutMe__content {
+.AboutMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -179,14 +176,50 @@
   margin-bottom: 1.5rem;
 }
 
+.AboutMe__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.AboutMe img {
+  height: 10rem;
+  margin-bottom: 1.5rem;
+}
+
 .AboutMe__title {
   margin-bottom: 1.5rem;
   color: #bf764c;
   font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .AboutMe__description {
   color: #5d5656;
+}
+
+.AboutMe__contactInfo {
+  margin-top: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .AboutMe__link {
@@ -202,6 +235,40 @@
   color: #db9a68;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@media screen and (min-width: 600px) {
+  .AboutMe {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+  }
+  .AboutMe img {
+    height: 15rem;
+  }
+  .AboutMe__img {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 1.5rem;
+  }
+  .AboutMe__title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .AboutMe__text {
+    padding: 0 4rem;
+  }
+  .AboutMe__contactInfo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 /* ===== Base ===== */
@@ -221,7 +288,7 @@ a {
 /* ===== Reuseable CSS Classes ===== */
 .mycontainer {
   height: 100vh;
-  padding: 3rem;
+  padding: 4rem;
 }
 
 .center {

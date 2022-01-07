@@ -1,11 +1,16 @@
 .AboutMe {
-  img {
-    height: $image-height;
-    margin-bottom: $mb-1-5;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $mb-1-5;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  &__content {
-    flex-direction: column;
+  img {
+    height: $image-height;
     margin-bottom: $mb-1-5;
   }
 
@@ -13,22 +18,59 @@
     margin-bottom: $mb-1-5;
     color: $second-color;
     font-size: $h1-font-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__description {
-      color:$text-color;
+    color: $text-color;
   }
 
-  &__link{
-      margin-right: $mb-2-5;
-      font-size: $h1-font-size;
-      color:$first-color;
-      cursor: pointer;
-      transition: 0.4s;
+  &__contactInfo {
+    margin-top: $mb-1-5;
+    justify-content: center;
+    align-items: center;
   }
 
-  &__link:hover{
-    color:$third-color;
+  &__link {
+    margin-right: $mb-2-5;
+    font-size: $h1-font-size;
+    color: $first-color;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  &__link:hover {
+    color: $third-color;
     transform: scale(1.2);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .AboutMe {
+    flex-direction: row;
+    justify-content: baseline;
+
+    img {
+      height: $image-height-large;
+    }
+
+    &__img {
+      align-items: flex-start;
+      padding: $pl-1-5;
+    }
+
+    &__title {
+      justify-content: flex-start;
+    }
+
+    &__text {
+      padding: 0 $pl-4;
+    }
+
+    &__contactInfo {
+      justify-content: flex-start;
+    }
   }
 }

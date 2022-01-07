@@ -4,13 +4,12 @@ import { BsGithub, BsEnvelope, BsLinkedin } from "react-icons/bs";
 
 const AboutMe = () => {
   return (
-    <div className="AboutMe mycontainer">
-      <section className="  AboutMe__content">
-        <div className="flex flex-col flex-center">
-          <img src={me} alt="me" />
-          <h1 className="AboutMe__title">Hi, I'm Lixuan Luo</h1>
-        </div>
-
+    <div className="AboutMe mycontainer flex">
+      <section className=" AboutMe__img">
+        <img src={me} alt="me" />
+      </section>
+      <section className="AboutMe__text">
+        <h1 className="AboutMe__title">Hi, I'm Lixuan Luo</h1>
         <p className="AboutMe__description">
           I am a Front-End Web Developer and Designer based in Toronto, with a
           passion for creating engaging, entertaining user experiences.
@@ -25,28 +24,17 @@ const AboutMe = () => {
           I'm excited to make the leap and continue refining my skills with the
           right company.
         </p>
-      </section>
-      <section className="AboutMe__contactInfo flex flex-center">
-        <div className="AboutMe__link">
-          <BsEnvelope />
-        </div>
-        <div className="AboutMe__link">
-          <BsGithub />
-        </div>
-        <div className="AboutMe__link">
-          <BsLinkedin />
-        </div>
-
-        <div>
-          {/* <BsGithub /> */}
-          {/* <a
-            href="https://github.com/YourNeptune"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://github.com/YourNeptune
-          </a> */}
-        </div>
+        <section className="AboutMe__contactInfo flex">
+          <div className="AboutMe__link">
+            <BsEnvelope />
+          </div>
+          <div className="AboutMe__link">
+            <BsGithub />
+          </div>
+          <div className="AboutMe__link">
+            <BsLinkedin />
+          </div>
+        </section>
       </section>
     </div>
   );
