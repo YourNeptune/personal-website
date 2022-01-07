@@ -243,18 +243,11 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: baseline;
-        -ms-flex-pack: baseline;
-            justify-content: baseline;
-  }
-  .AboutMe img {
-    height: 15rem;
   }
   .AboutMe__img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 1.5rem;
   }
   .AboutMe__title {
     -webkit-box-pack: start;
@@ -262,12 +255,18 @@
             justify-content: flex-start;
   }
   .AboutMe__text {
-    padding: 0 4rem;
+    padding: 0 0 0 4rem;
   }
   .AboutMe__contactInfo {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .AboutMe img {
+    height: 15rem;
   }
 }
 
@@ -327,4 +326,10 @@ a {
 
 .clickable {
   cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .mycontainer {
+    padding: 4rem 10rem;
+  }
 }
