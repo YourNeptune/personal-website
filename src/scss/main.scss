@@ -5,6 +5,8 @@
 @import "./navMenu";
 @import "./navbar";
 @import "./aboutMe";
+@import "./projects";
+@import "./projectCard";
 
 /* ===== Base ===== */
 * {
@@ -20,7 +22,7 @@ a {
 
 /* ===== Reuseable CSS Classes ===== */
 .mycontainer {
-  height: 100vh;
+  min-height: 100vh;
   padding: $pl-4;
 }
 
@@ -48,13 +50,12 @@ a {
   width: 100%;
 }
 
-.clickable{
+.clickable {
   cursor: pointer;
 }
 
-
 @media screen and (min-width: 600px) {
   .mycontainer {
-    padding:  $pl-large;
+    padding: $pl-large;
   }
 }

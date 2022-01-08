@@ -4,7 +4,7 @@ import { BsGithub, BsEnvelopeFill, BsLinkedin } from "react-icons/bs";
 
 const AboutMe = () => {
   return (
-    <div className="AboutMe mycontainer flex">
+    <div className="AboutMe mycontainer flex flex-center">
       <section className=" AboutMe__img">
         <img src={me} alt="me" />
       </section>

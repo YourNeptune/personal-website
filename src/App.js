@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import { Element } from "react-scroll/modules";
 import AboutMe from "./pages/AboutMe";
+import Projects from "./pages/Projects";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -11,8 +13,11 @@ function App() {
       <Element name="home">
         <Home />
       </Element>
-      <Element name="about">
+      <Element name="about" className="">
         <AboutMe />
+      </Element>
+      <Element name="projects">
+        <Projects />
       </Element>
     </div>
   );
