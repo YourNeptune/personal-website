@@ -1,11 +1,9 @@
 import * as React from "react";
-import todo_website from "../img/todo_website.png"
-import img2 from "../img/sunnyside_landing_page.png"
 
-const ProjectCard = () => {
+const ProjectCard = ({ title, img }) => {
   return (
-    <div className="ProjectCard ">
-        <img src={todo_website} /> 
+    <div className="ProjectCard flex flex-center">
+      <img src={img} alt="img" />
     </div>
   );
 };

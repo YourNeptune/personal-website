@@ -1,0 +1,46 @@
+.TabPanel {
+  &__projects {
+    display: grid;
+    place-items: center;
+    gap: $mb-2;
+    margin-top: $mb-2-5;
+  }
+
+  &__project {
+    animation-duration: 1.2s;
+    animation-name: slidein;
+    transition-delay: 0.4s;
+  }
+
+  &__project :nth-child(n) {
+      transition-delay: calc(n * 0.2s);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .TabPanel {
+    &__projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .TabPanel {
+    &__projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%; 
+    opacity: 1;
+  }
+}

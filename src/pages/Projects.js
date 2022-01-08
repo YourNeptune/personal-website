@@ -1,6 +1,8 @@
 import { Box, Tab, Tabs, createTheme, ThemeProvider } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import TabPanel from "../components/TabPanel";
+import todo_website from "../img/todo_website.png";
+import sunnyside_landing_page from "../img/sunnyside_landing_page.png";
 
 function a11yProps(index) {
   return {
@@ -10,7 +12,18 @@ function a11yProps(index) {
 }
 
 const Projects = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const [reactJSProjects, setProjectsArray] = useState([
+    { title: "Todo App", img: todo_website },
+    { title: "Todo App", img: todo_website },
+    { title: "Todo App", img: todo_website },
+    { title: "Todo App", img: todo_website },
+  ]);
+  const [htmlProjects, setHtmlProjects] = useState([
+    { title: "sunnyside landing page", img: sunnyside_landing_page },
+  ]);
+
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -23,11 +36,12 @@ const Projects = () => {
       },
     },
   });
+
   return (
-    <div className="Projects mycontainer">
-      <h1 className="Projects__title flex flex-center">Projects</h1>
-      <ThemeProvider theme={theme} className="Projects__tabs">
-        <Box sx={{}}>
+    <div className="Projects mycontainer flex flex-col flex-center">
+      <h1 className="Projects__title">Projects</h1>
+      <ThemeProvider theme={theme}>
+        <Box>
           <Tabs
             value={value}
             onChange={handleChange}
@@ -37,14 +51,22 @@ const Projects = () => {
             centered
           >
             <Tab label="ReactJS" {...a11yProps(0)} />
-            <Tab label="Javascript" {...a11yProps(1)} />
+            <Tab label="HTML/CSS" {...a11yProps(1)} />
             <Tab label="Web design" {...a11yProps(2)} />
           </Tabs>
         </Box>
-        <TabPanel value={value} index={0}>
+        <TabPanel
+          value={value}
+          index={0}
+          projectsArray={reactJSProjects}
+        >
           Item One
         </TabPanel>
-        <TabPanel value={value} index={1}>
+        <TabPanel
+          value={value}
+          index={1}
+          projectsArray={htmlProjects}
+        >
           Item Two
         </TabPanel>
         <TabPanel value={value} index={2}>
