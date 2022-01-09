@@ -1,4 +1,7 @@
 .TabPanel {
+  display: grid;
+  place-items: center;
+
   &__projects {
     display: grid;
     place-items: center;
@@ -13,14 +16,14 @@
   }
 
   &__project :nth-child(n) {
-      transition-delay: calc(n * 0.2s);
+    transition-delay: calc(n * 0.2s);
   }
 }
 
 @media screen and (min-width: 750px) {
   .TabPanel {
     &__projects {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, $image-height-large);
     }
   }
 }
@@ -28,7 +31,7 @@
 @media screen and (min-width: 1200px) {
   .TabPanel {
     &__projects {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, $image-height-large);
     }
   }
 }
@@ -40,7 +43,7 @@
   }
 
   to {
-    margin-left: 0%; 
+    margin-left: 0%;
     opacity: 1;
   }
 }

@@ -291,6 +291,12 @@
      object-fit: cover;
 }
 
+.TabPanel {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
 .TabPanel__projects {
   display: -ms-grid;
   display: grid;
@@ -315,15 +321,15 @@
 
 @media screen and (min-width: 750px) {
   .TabPanel__projects {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (15rem)[2];
+        grid-template-columns: repeat(2, 15rem);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .TabPanel__projects {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (15rem)[3];
+        grid-template-columns: repeat(3, 15rem);
   }
 }
 

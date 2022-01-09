@@ -38,8 +38,8 @@ const Projects = () => {
   });
 
   return (
-    <div className="Projects mycontainer flex flex-col flex-center">
-      <h1 className="Projects__title">Projects</h1>
+    <div className="Projects mycontainer ">
+      <h1 className="Projects__title flex flex-col flex-center">Projects</h1>
       <ThemeProvider theme={theme}>
         <Box>
           <Tabs
