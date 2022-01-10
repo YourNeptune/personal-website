@@ -316,7 +316,7 @@
           animation-duration: 0.6s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  bottom: -130px;
+  bottom: -100px;
 }
 
 .ProjectCard__label {
@@ -337,7 +337,7 @@
     opacity: 0;
   }
   to {
-    bottom: -130px;
+    bottom: -100px;
     opacity: 1;
   }
 }
@@ -348,7 +348,7 @@
     opacity: 0;
   }
   to {
-    bottom: -130px;
+    bottom: -100px;
     opacity: 1;
   }
 }
