@@ -284,6 +284,8 @@
   border-radius: 8px;
   color: #fff;
   text-align: center;
+  -webkit-box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
+          box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
 }
 
 .ProjectCard__img {
@@ -297,8 +299,6 @@
   border-radius: 8px;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
-          box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
 }
 
 .ProjectCard:hover {
