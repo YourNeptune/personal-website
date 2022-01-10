@@ -1,8 +1,11 @@
 import { Box, Tab, Tabs, createTheme, ThemeProvider } from "@mui/material";
 import React, { useState } from "react";
 import TabPanel from "../components/TabPanel";
-import todo_website from "../img/todo_website.png";
-import sunnyside_landing_page from "../img/sunnyside_landing_page.png";
+import {
+  reactJSProjects,
+  htmlProjects,
+  designProjects,
+} from "../doc/projects_File";
 
 function a11yProps(index) {
   return {
@@ -13,47 +16,10 @@ function a11yProps(index) {
 
 const Projects = () => {
   const [value, setValue] = useState(0);
-  const [reactJSProjects, setProjectsArray] = useState([
-    { title: "Todo App", img: todo_website },
-    { title: "Todo App", img: todo_website },
-    { title: "Todo App", img: todo_website },
-    { title: "Todo App", img: todo_website },
-  ]);
-  const [htmlProjects, setHtmlProjects] = useState([
-    { title: "sunnyside landing page", img: sunnyside_landing_page },
-  ]);
-
-  const [showTab1, setShowTab1] = useState(false);
-  const [showTab2, setShowTab2] = useState(false);
-  const [showTab3, setShowTab3] = useState(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    console.log(newValue);
-    // const tab = event.target.innerText;
-    switch (newValue) {
-      case 0:
-        setShowTab1(true);
-        setShowTab2(false);
-        setShowTab3(false);
-        break;
-      case 1:
-        setShowTab1(false);
-        setShowTab2(true);
-        setShowTab3(false);
-        break;
-      case 2:
-        setShowTab1(false);
-        setShowTab2(false);
-        setShowTab3(true);
-        break;
-      default:
-        break;
-    }
   };
-  console.log("tab1:", showTab1);
-  console.log("tab2:", showTab2);
-  console.log("tab3:", showTab3);
 
   const theme = createTheme({
     palette: {
@@ -81,28 +47,13 @@ const Projects = () => {
             <Tab label="Web design" {...a11yProps(2)} />
           </Tabs>
         </Box>
-        <TabPanel
-          value={value}
-          index={0}
-          projectsArray={reactJSProjects}
-          showProjects={showTab1}
-        >
+        <TabPanel value={value} index={0} projectsArray={reactJSProjects}>
           Item One
         </TabPanel>
-        <TabPanel
-          value={value}
-          index={1}
-          projectsArray={htmlProjects}
-          showProjects={showTab2}
-        >
+        <TabPanel value={value} index={1} projectsArray={htmlProjects}>
           Item Two
         </TabPanel>
-        <TabPanel
-          value={value}
-          index={2}
-          projectsArray={htmlProjects}
-          showProjects={showTab3}
-        >
+        <TabPanel value={value} index={2} projectsArray={designProjects}>
           Item Three
         </TabPanel>
       </ThemeProvider>

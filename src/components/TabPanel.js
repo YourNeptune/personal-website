@@ -2,8 +2,7 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 
 const TabPanel = (props) => {
-  const { children, value, index, projectsArray, showProjects, ...other } =
-    props;
+  const { children, value, index, projectsArray, ...other } = props;
   return (
     <div
       role="tabpanel"
@@ -13,16 +12,28 @@ const TabPanel = (props) => {
       {...other}
       className="TabPanel"
     >
-      {value === index && (
+      {value === index && (value === 0 || value === 1) && (
         <div className="TabPanel__projects">
           {projectsArray.map((_, index) => {
             return (
               <div
                 key={index}
                 className="TabPanel__project"
-                style={{ transitionDelay: `${index * 500}ms` }}
+                // style={{ transitionDelay: `${index * 500}ms` }}
               >
                 <ProjectCard title={_.title} img={_.img} />
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {value === index && value === 2 && (
+        <div className="TabPanel__designs">
+          {projectsArray.map((_) => {
+            return (
+              <div className="TabPanel__design">
+                <img src={_.img} alt={_.title} />
               </div>
             );
           })}

@@ -265,7 +265,7 @@
 
 @media screen and (min-width: 850px) {
   .AboutMe img {
-    height: 15rem;
+    height: 18rem;
   }
 }
 
@@ -280,7 +280,7 @@
 
 .ProjectCard {
   height: 12rem;
-  width: 15rem;
+  width: 18rem;
 }
 
 .ProjectCard img {
@@ -289,6 +289,8 @@
   border-radius: 8px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
+          box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
 }
 
 .TabPanel {
@@ -305,24 +307,45 @@
   margin-top: 2.5rem;
 }
 
-.TabPanel__project {
+.TabPanel__project, .TabPanel__design {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
   -webkit-animation-name: fadein;
           animation-name: fadein;
 }
 
+.TabPanel__designs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2.5rem;
+  gap: 2rem;
+}
+
+.TabPanel__designs img {
+  width: 18rem;
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
+          box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
+  border-radius: 8px;
+}
+
 @media screen and (min-width: 750px) {
   .TabPanel__projects {
-    -ms-grid-columns: (15rem)[2];
-        grid-template-columns: repeat(2, 15rem);
+    -ms-grid-columns: (18rem)[2];
+        grid-template-columns: repeat(2, 18rem);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .TabPanel__projects {
-    -ms-grid-columns: (15rem)[3];
-        grid-template-columns: repeat(3, 15rem);
+    -ms-grid-columns: (18rem)[3];
+        grid-template-columns: repeat(3, 18rem);
   }
 }
 

@@ -9,9 +9,26 @@
     margin-top: $mb-2-5;
   }
 
-  &__project {
+  &__project,
+  &__design {
     animation-duration: 0.8s;
     animation-name: fadein;
+  }
+
+  &__designs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: $mb-2-5;
+    gap: $mb-2;
+
+    img {
+      width: $image-height-large;
+      border-radius: 8px;
+      box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
+      border-radius: 8px;
+    }
   }
 }
 
