@@ -279,11 +279,19 @@
 }
 
 .ProjectCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+}
+
+.ProjectCard__img {
   height: 12rem;
   width: 18rem;
 }
 
-.ProjectCard img {
+.ProjectCard__img img {
   height: 100%;
   width: 100%;
   border-radius: 8px;
@@ -291,6 +299,58 @@
      object-fit: cover;
   -webkit-box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
           box-shadow: 1px 3px 10px 3px rgba(126, 126, 126, 0.1);
+}
+
+.ProjectCard:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.ProjectCard:hover .ProjectCard__label {
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  bottom: -130px;
+}
+
+.ProjectCard__label {
+  background-color: rgba(83, 83, 83, 0.7);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: -200px;
+}
+
+.ProjectCard__label:hover {
+  visibility: visible;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: -130px;
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: -130px;
+    opacity: 1;
+  }
 }
 
 .TabPanel {

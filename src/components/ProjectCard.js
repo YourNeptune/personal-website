@@ -2,8 +2,13 @@ import * as React from "react";
 
 const ProjectCard = ({ title, img }) => {
   return (
-    <div className="ProjectCard flex flex-center">
-      <img src={img} alt="img" />
+    <div className="ProjectCard">
+      <section className="ProjectCard__img">
+        <img src={img} alt="img" />
+      </section>
+      <section className="ProjectCard__label ">
+        <p>{title}</p>
+      </section>
     </div>
   );
 };
