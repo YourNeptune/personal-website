@@ -23,11 +23,37 @@ const Projects = () => {
     { title: "sunnyside landing page", img: sunnyside_landing_page },
   ]);
 
-
+  const [showTab1, setShowTab1] = useState(false);
+  const [showTab2, setShowTab2] = useState(false);
+  const [showTab3, setShowTab3] = useState(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    console.log(newValue);
+    // const tab = event.target.innerText;
+    switch (newValue) {
+      case 0:
+        setShowTab1(true);
+        setShowTab2(false);
+        setShowTab3(false);
+        break;
+      case 1:
+        setShowTab1(false);
+        setShowTab2(true);
+        setShowTab3(false);
+        break;
+      case 2:
+        setShowTab1(false);
+        setShowTab2(false);
+        setShowTab3(true);
+        break;
+      default:
+        break;
+    }
   };
+  console.log("tab1:", showTab1);
+  console.log("tab2:", showTab2);
+  console.log("tab3:", showTab3);
 
   const theme = createTheme({
     palette: {
@@ -59,6 +85,7 @@ const Projects = () => {
           value={value}
           index={0}
           projectsArray={reactJSProjects}
+          showProjects={showTab1}
         >
           Item One
         </TabPanel>
@@ -66,10 +93,16 @@ const Projects = () => {
           value={value}
           index={1}
           projectsArray={htmlProjects}
+          showProjects={showTab2}
         >
           Item Two
         </TabPanel>
-        <TabPanel value={value} index={2}>
+        <TabPanel
+          value={value}
+          index={2}
+          projectsArray={htmlProjects}
+          showProjects={showTab3}
+        >
           Item Three
         </TabPanel>
       </ThemeProvider>

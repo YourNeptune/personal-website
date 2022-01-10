@@ -306,17 +306,10 @@
 }
 
 .TabPanel__project {
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
-  -webkit-animation-name: slidein;
-          animation-name: slidein;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-}
-
-.TabPanel__project :nth-child(n) {
-  -webkit-transition-delay: calc(n * 0.2s);
-          transition-delay: calc(n * 0.2s);
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
 }
 
 @media screen and (min-width: 750px) {
@@ -333,24 +326,28 @@
   }
 }
 
-@-webkit-keyframes slidein {
+@-webkit-keyframes fadein {
   from {
-    margin-left: 100%;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
     opacity: 0;
   }
   to {
-    margin-left: 0%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
   }
 }
 
-@keyframes slidein {
+@keyframes fadein {
   from {
-    margin-left: 100%;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
     opacity: 0;
   }
   to {
-    margin-left: 0%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
   }
 }

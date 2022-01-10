@@ -1,9 +1,9 @@
-import { Box, Grid, Grow, Stack, Typography } from "@mui/material";
 import React from "react";
 import ProjectCard from "./ProjectCard";
 
 const TabPanel = (props) => {
-  const { children, value, index, projectsArray, ...other } = props;
+  const { children, value, index, projectsArray, showProjects, ...other } =
+    props;
   return (
     <div
       role="tabpanel"
@@ -16,11 +16,13 @@ const TabPanel = (props) => {
       {value === index && (
         <div className="TabPanel__projects">
           {projectsArray.map((_, index) => {
-            //   style={{transitionDelay: `${index} * 0.2s`}}
             return (
-              <div className="TabPanel__project" >
+              <div
+                key={index}
+                className="TabPanel__project"
+                style={{ transitionDelay: `${index * 500}ms` }}
+              >
                 <ProjectCard title={_.title} img={_.img} />
-                {console.log(index)}
               </div>
             );
           })}
