@@ -1,4 +1,5 @@
 import React from "react";
+import DesignCard from "./DesignCard";
 import ProjectCard from "./ProjectCard";
 
 const TabPanel = (props) => {
@@ -12,7 +13,7 @@ const TabPanel = (props) => {
       {...other}
       className="TabPanel"
     >
-      {value === index && (value === 0 || value === 1) && (
+      {value === index && (
         <div className="TabPanel__projects">
           {projectsArray.map((_, index) => {
             return (
@@ -26,6 +27,7 @@ const TabPanel = (props) => {
                   title={_.title}
                   websiteUrl={_.websiteUrl}
                   githubUrl={_.githubUrl}
+                  value={value}
                 />
               </div>
             );
@@ -33,17 +35,21 @@ const TabPanel = (props) => {
         </div>
       )}
 
-      {value === index && value === 2 && (
-        <div className="TabPanel__designs">
+      {/* {value === index && value === 2 && (
+        <div className="TabPanel__projects">
           {projectsArray.map((_) => {
             return (
-              <div className="TabPanel__design">
-                <img src={_.img} alt={_.title} />
-              </div>
+              <ProjectCard
+                img={_.img}
+                title={_.title}
+                websiteUrl={_.websiteUrl}
+                githubUrl={_.githubUrl}
+                value={value}
+              />
             );
           })}
         </div>
-      )}
+      )} */}
     </div>
   );
 };

@@ -9,8 +9,7 @@
     margin-top: $mb-2-5;
   }
 
-  &__project,
-  &__design {
+  &__project {
     animation-duration: 0.8s;
     animation-name: fadein;
   }
@@ -48,14 +47,3 @@
   }
 }
 
-@keyframes fadein {
-  from {
-    transform: scale(0.2);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}

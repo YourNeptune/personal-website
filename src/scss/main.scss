@@ -8,6 +8,7 @@
 @import "./projects";
 @import "./projectCard";
 @import "./tabPanel";
+@import "./designCard";
 
 /* ===== Base ===== */
 * {
@@ -58,5 +59,17 @@ a {
 @media screen and (min-width: 600px) {
   .mycontainer {
     padding: $pl-large $pl-5;
+  }
+}
+
+@keyframes fadein {
+  from {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }

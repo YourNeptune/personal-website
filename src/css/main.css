@@ -380,7 +380,7 @@
   margin-top: 2.5rem;
 }
 
-.TabPanel__project, .TabPanel__design {
+.TabPanel__project {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
   -webkit-animation-name: fadein;
@@ -422,30 +422,23 @@
   }
 }
 
-@-webkit-keyframes fadein {
-  from {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
+.DesignCard {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  height: 50%;
+  overflow: hidden;
 }
 
-@keyframes fadein {
-  from {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
+.DesignCard img {
+  height: 100%;
+}
+
+.DesignCard__button {
+  background-color: red;
+  height: 50px;
+  z-index: 100;
 }
 
 /* ===== Base ===== */
@@ -509,5 +502,31 @@ a {
 @media screen and (min-width: 600px) {
   .mycontainer {
     padding: 8rem 5rem;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
   }
 }

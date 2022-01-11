@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import { Element } from "react-scroll/modules";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
