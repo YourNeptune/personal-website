@@ -21,7 +21,12 @@ const TabPanel = (props) => {
                 className="TabPanel__project"
                 // style={{ transitionDelay: `${index * 500}ms` }}
               >
-                <ProjectCard title={_.title} img={_.img} />
+                <ProjectCard
+                  img={_.img}
+                  title={_.title}
+                  websiteUrl={_.websiteUrl}
+                  githubUrl={_.githubUrl}
+                />
               </div>
             );
           })}

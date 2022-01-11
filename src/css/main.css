@@ -310,47 +310,60 @@
 }
 
 .ProjectCard:hover .ProjectCard__label {
-  -webkit-animation-name: slidein;
-          animation-name: slidein;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  bottom: -100px;
+  opacity: 1;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
 }
 
 .ProjectCard__label {
-  background-color: rgba(83, 83, 83, 0.7);
+  background-color: rgba(12, 12, 12, 0.85);
   height: 100%;
   width: 100%;
   position: absolute;
-  bottom: -200px;
+  bottom: 0px;
+  opacity: 0;
 }
 
-.ProjectCard__label:hover {
-  visibility: visible;
+.ProjectCard__label__container {
+  height: 100%;
+  width: 100%;
 }
 
-@-webkit-keyframes slidein {
-  from {
-    bottom: -200px;
-    opacity: 0;
-  }
-  to {
-    bottom: -100px;
-    opacity: 1;
-  }
+.ProjectCard__label__button {
+  margin-top: 1rem;
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  font-size: 0.813rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-@keyframes slidein {
-  from {
-    bottom: -200px;
-    opacity: 0;
-  }
-  to {
-    bottom: -100px;
-    opacity: 1;
-  }
+.ProjectCard__label__button p {
+  margin-right: 0.25rem;
+}
+
+.ProjectCard__label__button:hover {
+  color: #ffc288;
+  border: 1px solid #ffc288;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.ProjectCard__label__githubLogo {
+  font-size: 1.25rem;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ProjectCard__label__githubLogo:hover {
+  color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .TabPanel {

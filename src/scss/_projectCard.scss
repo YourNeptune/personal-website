@@ -24,33 +24,60 @@
     cursor: pointer;
 
     .ProjectCard__label {
-      animation-name: slidein;
-      animation-duration: 0.6s;
-      animation-timing-function: ease-in-out;
-      bottom: -100px;
+      opacity: 1;
+      transition: 0.6s ease-in-out;
     }
   }
 
   &__label {
-    background-color: rgba(83, 83, 83, 0.7);
+    background-color: rgba(12, 12, 12, 0.85);
     height: 100%;
     width: 100%;
     position: absolute;
-    bottom: -200px;
-  }
-
-  &__label:hover {
-    visibility: visible;
-  }
-}
-
-@keyframes slidein {
-  from {
-    bottom: -200px;
+    bottom: 0px;
     opacity: 0;
-  }
-  to {
-    bottom: -100px;
-    opacity: 1;
+
+    &__container {
+      height: 100%;
+      width: 100%;
+    }
+
+    &__title {
+      // margin: $mb-0-5 $mb-1;
+      // margin-top: $mb-2-5;
+    }
+
+    &__button {
+      p {
+        margin-right: $mb-0-25;
+      }
+      
+      margin-top: $mb-1;
+      border: 1px solid $dark-theme-text;
+      padding: $pl-0-5;
+      font-size: $small-font-size;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    &__button:hover {
+      color: $active-color;
+      border: 1px solid $active-color;
+      transform: scale(1.1);
+      transition: 0.4s ease-in-out;
+    }
+
+    &__githubLogo {
+      font-size: $h2-font-size;
+      position: absolute;
+      right: $pl-1-5;
+      bottom: $pl-1;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    &__githubLogo:hover {
+      color: white;
+      transform: scale(1.1);
+      transition: 0.4s ease-in-out;
+    }
   }
 }
