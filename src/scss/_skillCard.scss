@@ -1,0 +1,18 @@
+.SkillCard {
+  img {
+    height: $large-font-size;
+  }
+
+  p {
+    font-size: $normal-font-size;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .SkillCard {
+    p {
+      font-size: $h2-font-size;
+    }
+  }
+}

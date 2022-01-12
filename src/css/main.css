@@ -273,11 +273,6 @@
   background-color: #fdf5ee;
 }
 
-.Projects__title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
 .ProjectCard {
   position: relative;
   overflow: hidden;
@@ -457,6 +452,37 @@
   }
 }
 
+.SkillCard img {
+  height: 3.5rem;
+}
+
+.SkillCard p {
+  font-size: 0.938rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .SkillCard p {
+    font-size: 1.25rem;
+  }
+}
+
+.Skills__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (60px)[3];
+      grid-template-columns: repeat(3, 60px);
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .Skills__container {
+    -ms-grid-columns: (minmax(60px, 150px))[4];
+        grid-template-columns: repeat(4, minmax(60px, 150px));
+  }
+}
+
 /* ===== Base ===== */
 * {
   margin: 0;
@@ -513,6 +539,11 @@ a {
 
 .clickable {
   cursor: pointer;
+}
+
+.Title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 600px) {

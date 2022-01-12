@@ -1,0 +1,17 @@
+.Skills {
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: $mb-2-5;
+    margin-top: $mb-1;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .Skills {
+    &__container {
+      grid-template-columns: repeat(4, minmax(60px, 150px));
+    }
+  }
+}

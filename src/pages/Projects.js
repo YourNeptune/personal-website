@@ -31,7 +31,7 @@ const Projects = () => {
 
   return (
     <div className="Projects mycontainer ">
-      <h1 className="Projects__title flex flex-col flex-center">Projects</h1>
+      <h1 className="Title flex flex-col flex-center">Projects</h1>
       <ThemeProvider theme={theme}>
         <Box>
           <Tabs
