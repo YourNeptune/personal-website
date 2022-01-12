@@ -1,7 +1,13 @@
+import { Fade, Modal, Typography, Backdrop, Box } from "@mui/material";
 import * as React from "react";
 import { BsFillEyeFill, BsGithub, BsArrowRight } from "react-icons/bs";
+import ProjectModal from "./ProjectModal";
 
 const ProjectCard = ({ title, img, websiteUrl, githubUrl, value }) => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div className="ProjectCard">
       <section className="ProjectCard__img">
@@ -21,10 +27,16 @@ const ProjectCard = ({ title, img, websiteUrl, githubUrl, value }) => {
               <BsArrowRight />
             </a>
           ) : (
-            <div className="ProjectCard__label__button flex flex-center">
-              <p>View</p>
-              <BsArrowRight />
-            </div>
+            <>
+              <div
+                className="ProjectCard__label__button flex flex-center"
+                onClick={handleOpen}
+              >
+                <p>View</p>
+                <BsArrowRight />
+              </div>
+              <ProjectModal open={open} handleClose={handleClose} img={img} />
+            </>
           )}
         </section>
 

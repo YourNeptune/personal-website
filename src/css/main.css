@@ -422,23 +422,39 @@
   }
 }
 
-.DesignCard {
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-name: fadein;
-          animation-name: fadein;
-  height: 50%;
-  overflow: hidden;
+.ProjectModal {
+  overflow: scroll;
 }
 
-.DesignCard img {
-  height: 100%;
+.ProjectModal__container {
+  overflow: scroll;
+  width: 300px;
+  height: 80vh;
+  background-color: white;
+  z-index: 1300;
+  position: relative;
 }
 
-.DesignCard__button {
-  background-color: red;
-  height: 50px;
-  z-index: 100;
+.ProjectModal__img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .ProjectModal__container {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .ProjectModal__container {
+    width: 800px;
+  }
 }
 
 /* ===== Base ===== */

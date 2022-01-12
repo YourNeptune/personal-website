@@ -1,5 +1,4 @@
 import React from "react";
-import DesignCard from "./DesignCard";
 import ProjectCard from "./ProjectCard";
 
 const TabPanel = (props) => {
@@ -34,22 +33,6 @@ const TabPanel = (props) => {
           })}
         </div>
       )}
-
-      {/* {value === index && value === 2 && (
-        <div className="TabPanel__projects">
-          {projectsArray.map((_) => {
-            return (
-              <ProjectCard
-                img={_.img}
-                title={_.title}
-                websiteUrl={_.websiteUrl}
-                githubUrl={_.githubUrl}
-                value={value}
-              />
-            );
-          })}
-        </div>
-      )} */}
     </div>
   );
 };
