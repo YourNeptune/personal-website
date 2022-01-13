@@ -30,16 +30,17 @@ const Projects = () => {
   });
 
   return (
-    <div className="Projects mycontainer ">
+    <div className="Projects mycontainer flex flex-col flex-center">
       <h1 className="Title flex flex-col flex-center">Projects</h1>
-      <p className="Subtitle">
-        Here are some projects that I have made
-      </p>
+      <p className="Subtitle">Here are some projects that I have made</p>
       <ThemeProvider theme={theme}>
-        <Box>
+        <Box sx={{ maxWidth: 480 }}>
           <Tabs
             value={value}
             onChange={handleChange}
+            variant="scrollable"
+            scrollButtons
+            allowScrollButtonsMobile
             aria-label="basic tabs example"
             textColor="secondary"
             indicatorColor="secondary"
