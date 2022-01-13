@@ -6,6 +6,7 @@ import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Element name="contact">
         <Contact />
       </Element>
+      <Footer />
     </div>
   );
 }

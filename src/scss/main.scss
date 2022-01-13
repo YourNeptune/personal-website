@@ -12,13 +12,14 @@
 @import "./skillCard";
 @import "./skills";
 @import "./contact";
+@import "./footer";
 
 /* ===== Base ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans", sans-serif;
+  font-family: $body-font;
 }
 a {
   cursor: pointer;
@@ -68,12 +69,8 @@ a {
   color: $text-color-light;
   font-size: $normal-font-size;
   margin-bottom: $mb-2;
-}
 
-@media screen and (min-width: 600px) {
-  .mycontainer {
-    padding: $pl-large $pl-5;
-  }
+  text-align: center;
 }
 
 @keyframes fadein {
@@ -85,5 +82,20 @@ a {
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .mycontainer {
+    padding: $pl-large $pl-5;
+  }
+  .Subtitle {
+    padding: 0 8rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Subtitle {
+    padding: 0 20rem;
   }
 }

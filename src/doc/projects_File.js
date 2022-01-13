@@ -71,8 +71,8 @@ export const htmlProjects = [
 ];
 
 export const designProjects = [
-  { title: "Blog", img: blogPage1 },
-  { title: "Blog", img: blogPage2 },
-  { title: "Pricing", img: pricing },
+  { title: "Blogs Page", img: blogPage1 },
+  { title: "Blog Article Page", img: blogPage2 },
+  { title: "Pricing Page", img: pricing },
   { title: "Landing Page", img: greencube_landing_page },
 ];

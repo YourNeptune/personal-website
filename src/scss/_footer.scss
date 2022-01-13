@@ -1,0 +1,16 @@
+.Footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: $pl-3;
+
+  p {
+    font-family: $second-font;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .Footer {
+    padding: $pl-5;
+  }
+}

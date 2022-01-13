@@ -485,6 +485,7 @@
 
 .Contact {
   padding: 0 2rem 2rem;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
@@ -505,6 +506,23 @@
   .Contact__info {
     font-size: 1.25rem;
     margin: 2.5rem;
+  }
+}
+
+.Footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 3rem;
+}
+
+.Footer p {
+  font-family: "Indie Flower", cursive;
+}
+
+@media screen and (min-width: 600px) {
+  .Footer {
+    padding: 5rem;
   }
 }
 
@@ -575,12 +593,7 @@ a {
   color: #918888;
   font-size: 0.938rem;
   margin-bottom: 2rem;
-}
-
-@media screen and (min-width: 600px) {
-  .mycontainer {
-    padding: 8rem 5rem;
-  }
+  text-align: center;
 }
 
 @-webkit-keyframes fadein {
@@ -606,5 +619,20 @@ a {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .mycontainer {
+    padding: 8rem 5rem;
+  }
+  .Subtitle {
+    padding: 0 8rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Subtitle {
+    padding: 0 20rem;
   }
 }

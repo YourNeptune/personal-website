@@ -32,7 +32,7 @@ const Projects = () => {
   return (
     <div className="Projects mycontainer ">
       <h1 className="Title flex flex-col flex-center">Projects</h1>
-      <p className="Subtitle flex flex-col flex-center">
+      <p className="Subtitle">
         Here are some projects that I have made
       </p>
       <ThemeProvider theme={theme}>
