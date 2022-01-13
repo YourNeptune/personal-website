@@ -1,7 +1,7 @@
 .AboutMe {
   display: flex;
   flex-direction: column;
-//   margin-bottom: $mb-1-5;
+  //   margin-bottom: $mb-1-5;
 
   &__img {
     display: flex;
@@ -34,15 +34,16 @@
   }
 
   &__link {
-    margin-right: $mb-2-5;
-    font-size: $h1-font-size;
-    color: $first-color;
+    margin-right: $mb-1-5 !important;
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.4s !important;
+    font-size: 2rem !important;
+    color: $first-color !important;
+    margin-bottom: 0 !important;
   }
 
   &__link:hover {
-    color: $third-color;
+    color: $third-color !important;
     transform: scale(1.2);
   }
 }
@@ -51,7 +52,6 @@
   .AboutMe {
     flex-direction: row;
 
-   
     &__img {
       align-items: flex-start;
     }

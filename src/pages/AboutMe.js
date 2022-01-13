@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import me from "../img/me.png";
 import { BsGithub, BsEnvelopeFill, BsLinkedin } from "react-icons/bs";
+import { IconButton, Tooltip } from "@mui/material";
 
 const AboutMe = () => {
+  const [copyEmailMessage, setCopyEmailMessage] = useState("Copy");
+
+  const copyEmailAddress = () => {
+    navigator.clipboard.writeText("lixuanluo@hotmail.com");
+    setCopyEmailMessage("Copied!");
+    setTimeout(() => {
+      setCopyEmailMessage("Copy");
+    }, 2000);
+  };
+
   return (
     <div className="AboutMe mycontainer flex flex-center">
       <section className=" AboutMe__img">
@@ -25,15 +36,30 @@ const AboutMe = () => {
           right company.
         </p>
         <section className="AboutMe__contactInfo flex">
-          <div className="AboutMe__link">
-            <BsEnvelopeFill />
-          </div>
-          <div className="AboutMe__link">
-            <BsGithub />
-          </div>
-          <div className="AboutMe__link">
-            <BsLinkedin />
-          </div>
+          <Tooltip className="AboutMe__link" title={copyEmailMessage}>
+            <IconButton>
+              <BsEnvelopeFill onClick={copyEmailAddress} />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip className="AboutMe__link" title="Github">
+            <IconButton
+              href="https://github.com/YourNeptune"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsGithub />
+            </IconButton>
+          </Tooltip>
+          <Tooltip className="AboutMe__link" title="LinkedIn">
+            <IconButton
+              href="https://www.linkedin.com/in/lixuan-l-5b68a31aa/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsLinkedin />
+            </IconButton>
+          </Tooltip>
         </section>
       </section>
     </div>

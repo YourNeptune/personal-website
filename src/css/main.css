@@ -222,16 +222,17 @@
 }
 
 .AboutMe__link {
-  margin-right: 2.5rem;
-  font-size: 1.5rem;
-  color: #ad704f;
+  margin-right: 1.5rem !important;
   cursor: pointer;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.4s !important;
+  transition: 0.4s !important;
+  font-size: 2rem !important;
+  color: #ad704f !important;
+  margin-bottom: 0 !important;
 }
 
 .AboutMe__link:hover {
-  color: #db9a68;
+  color: #db9a68 !important;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
