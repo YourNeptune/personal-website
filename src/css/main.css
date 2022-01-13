@@ -483,6 +483,37 @@
   }
 }
 
+.Contact {
+  padding: 0 2rem 2rem;
+  text-align: center;
+}
+
+.Contact_subtitle {
+  color: #918888;
+  font-size: 0.938rem;
+  margin-bottom: 2rem;
+}
+
+.Contact__info {
+  color: #bf764c;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.Contact__info p {
+  margin-left: 1rem;
+  color: #5d5656;
+}
+
+@media screen and (min-width: 600px) {
+  .Contact__info {
+    font-size: 1.25rem;
+    margin: 2.5rem;
+  }
+}
+
 /* ===== Base ===== */
 * {
   margin: 0;
@@ -543,7 +574,7 @@ a {
 
 .Title {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 600px) {
